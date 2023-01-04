@@ -8,5 +8,9 @@ lettersn = int(input("How many letters"))
 numbersn = int(input("How many numbers"))
 symbolsn = int(input("How many symbols"))
 
-password = random.choices(letters,k=lettersn) + random.choices(numbers,k=numbersn) + random.choices(symbols,k=symbolsn)
-print(''.join(password))
+length = lettersn+numbersn+symbolsn
+
+passwordlist = random.choices(letters,k=lettersn) + random.choices(numbers,k=numbersn) + random.choices(symbols,k=symbolsn)
+password = ''.join(passwordlist)
+print(f"The password is {password}")
+print(f"The randomized password is {''.join(random.choices(password,k=length))}")
