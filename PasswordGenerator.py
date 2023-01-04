@@ -3,5 +3,10 @@ letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n',
 numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
 
-password = random.choices(letters,k=2) + random.choices(numbers,k=2) + random.choices(symbols,k=2)
+print("Welcome to password generator")
+lettersn = int(input("How many letters"))
+numbersn = int(input("How many numbers"))
+symbolsn = int(input("How many symbols"))
+
+password = random.choices(letters,k=lettersn) + random.choices(numbers,k=numbersn) + random.choices(symbols,k=symbolsn)
 print(''.join(password))
