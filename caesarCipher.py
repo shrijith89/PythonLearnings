@@ -5,8 +5,12 @@ myList = list(string)
 encryptedString = ''
 
 
-for i in myList:
-    encryptedCharacter = ord(i)+5
-    encryptedString += chr(encryptedCharacter)
+def shiftFunction (shift):
+    encryptedString = ''
+    for i in myList:
+        encryptedCharacter = ord(i) + shift
+        encryptedString += chr(encryptedCharacter)
+    return encryptedString
 
-print(f"The encrypted string is {encryptedString}")
+
+print(f"The encrypted string is {shiftFunction(3)}")
