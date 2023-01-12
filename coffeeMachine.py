@@ -31,11 +31,19 @@ resources = {
     "coffee": 100,
 }
 
-def report():
-    pass
+def process_coins():
+    total = 0
+    total += int(input("Enter the number of quaters")) * 0.25
+    total += int(input("Enter the number of dimes")) * 0.1
+    total += int(input("Enter the number of nickles")) * 0.05
+    total += int(input("Enter the number of pennies")) * 0.01
+    return total
+
 
 def coffee_Preparation():
     is_on = True
+    money = 0
+    change = 0
     while is_on:
         item = input("Type of drink (espresso, latte or cappuccino")
         if item == "espresso" or item == "latte" or item == "cappuccino":
@@ -44,10 +52,18 @@ def coffee_Preparation():
                     print(f"{i} is less")
                     break
                 else:
-                    print(f"{item} is being prepared")
-                    for i in resources:
-                        resources[i] -= MENU[item]['ingredients'][i]
-                    break
+                    money = process_coins()
+                    if money < MENU[item]['cost']:
+                        print(MENU[item]['cost'], money)
+                        print("Less Money.! Try something else")
+                        break
+                    else:
+                        print(f"{item} is being prepared")
+                        change =  money - MENU[item]['cost']
+                        for j in resources:
+                            resources[j] -= MENU[item]['ingredients'][j]
+                        print (f"Your change is {change}")
+                        break
         elif item == "report":
             for i in resources:
                 print(i, resources[i])
