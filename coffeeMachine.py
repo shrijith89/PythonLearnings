@@ -31,6 +31,7 @@ resources = {
     "coffee": 100,
 }
 
+
 def process_coins():
     total = 0
     total += int(input("Enter the number of quaters")) * 0.25
@@ -54,15 +55,14 @@ def coffee_Preparation():
                 else:
                     money = process_coins()
                     if money < MENU[item]['cost']:
-                        print(MENU[item]['cost'], money)
                         print("Less Money.! Try something else")
                         break
                     else:
                         print(f"{item} is being prepared")
-                        change =  money - MENU[item]['cost']
+                        change = money - MENU[item]['cost']
                         for j in resources:
                             resources[j] -= MENU[item]['ingredients'][j]
-                        print (f"Your change is {change}")
+                        print(f"Your change is {change}")
                         break
         elif item == "report":
             for i in resources:
