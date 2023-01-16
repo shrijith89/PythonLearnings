@@ -26,8 +26,8 @@ class A:
 
     def function(self, i):
         print(self.question)
-        candidateanswer = bool(input("Enter your answer (True/False) "))
-        if str(candidateanswer) == self.answer:
+        candidateanswer = input("Enter your answer (True/False) ")
+        if str(candidateanswer).lower() == self.answer.lower():
             A.count += 1
             print(f"Answer was correct, score is {A.count} out of {i}")
             print()
