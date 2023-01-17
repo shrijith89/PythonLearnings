@@ -1,0 +1,11 @@
+import colorgram as cg
+
+color_list = cg.extract("download.png", 2 ** 32)
+color_palette = []
+
+for count in range(len(color_list)):
+    rgb = color_list[count]
+    color = rgb.rgb
+    color_palette.append(color)
+
+print(color_palette)
