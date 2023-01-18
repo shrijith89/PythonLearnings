@@ -24,7 +24,7 @@ while is_on_race:
     for turtles in all_turtles:
         turtles.forward(random.randint(1, 50))
         if turtles.xcor() >= 230:
-            if turtles.color()[0] == user_bet:
+            if turtles.pencolor() == user_bet:
                 print("You won")
             else:
                 print("You lost")
