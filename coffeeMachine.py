@@ -70,5 +70,4 @@ def coffee_Preparation():
         elif item == "off":
             is_on = False
 
-
 coffee_Preparation()
