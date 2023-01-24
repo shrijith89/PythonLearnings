@@ -4,7 +4,6 @@ import turtle
 from turtle import Screen
 from Snake import *
 
-
 game_is_on = True
 screen = Screen()
 screen.bgcolor("black")
