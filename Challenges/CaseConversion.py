@@ -6,4 +6,3 @@ def func(s):
         else:
             str += i.lower()
     return str
-
