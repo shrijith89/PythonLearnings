@@ -4,7 +4,6 @@ STARTING_POSITIONS = [(0, 0), (-20, 0), (-40, 0)]
 segments = []
 MOVE_DISTANCE = 20
 
-
 class Snake:
 
     def __init__(self):
