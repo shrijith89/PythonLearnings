@@ -23,7 +23,6 @@ def food():
     turtle.goto(random.randint(-250, 250), random.randint(-250, 250))
     turtle.dot(20, "red")
 
-
 Snake.snake_body()
 Snake.move()
 screen.exitonclick()
